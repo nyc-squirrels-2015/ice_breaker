@@ -1,0 +1,23 @@
+
+
+<div class="container">
+
+  <h1>CRAIGSLIST JUNIOR!</h1>
+  <p><%= @category.name %></p>
+  <a href="<%= @category.id %>/edit">Edit Category</a>
+
+  <ul class="category_list">
+    <% @articles.each do |article| %>
+      <li>
+        <a href="/articles/<%= article.id %>">
+          <%= article.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+
+<a href="../">Back</a>
+
+</div>
+
+
