@@ -1,11 +1,15 @@
+
+
 get '/categories' do
   @categories = Category.all
-  erb :'index'
+  erb :categories
 end
 
 get '/categories/:id' do |id|
   @category = Category.find(id)
   @subcategories = @category.subcategories
-  erb ("categories/#{params[id]}/subcategories/")
+  @category_name = @category.name
+  @category_id = @category.id
+  erb :subcategories
 end
 

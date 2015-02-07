@@ -1,6 +1,8 @@
 # display quotes for a subcategory
 get '/categories/:category_id/subcategories/:subcategory_id/quotes' do
+
   user = current_user
+  p "show quotes user #{user}"
   if user == nil
     redirect ('/login')
   else

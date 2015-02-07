@@ -21,7 +21,10 @@ post '/login' do
   a_user = User.find_by(:email => params[:user][:email]).try(:authenticate, params[:user][:password])
   if a_user
     session[:user] = a_user.id
-    p "WINNING"
+     redirect '/categories'
+  else
+    @invalid_login = true
+    erb :'auth/login'
   end
-  redirect '/'
+
 end
