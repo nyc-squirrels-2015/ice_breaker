@@ -1,0 +1,15 @@
+
+<div class="list-group">
+
+  <h1><%=@category_name%></h1>
+  <%@subcategories.each do |subcategory|%>
+
+        <div class="list-group-item active">
+          <h4 class="list-group-item-heading"><a href="/categories/<%=@category_id%>/subcategories/<%=subcategory.id%>/quotes">
+            <span class="white_text"><%=subcategory.name%></span></a>
+          </h4>
+        </div>
+
+
+  <%end%><!-- end categories loop-->
+</div>

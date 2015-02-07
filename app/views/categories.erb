@@ -1,23 +1,17 @@
 
+<div class="list-group">
 
-<div class="container">
+  <h1>Here are our categories</h1>
+  <%@categories.each do |category|%>
 
-  <h1>CRAIGSLIST JUNIOR!</h1>
-  <p><%= @category.name %></p>
-  <a href="<%= @category.id %>/edit">Edit Category</a>
+        <div class="list-group-item active">
+          <h4 class="list-group-item-heading"><a href="/categories/<%=category.id%>"> <span class="white_text"><%=category.name%></span></a></h4>
+        </div>
 
-  <ul class="category_list">
-    <% @articles.each do |article| %>
-      <li>
-        <a href="/articles/<%= article.id %>">
-          <%= article.name %>
-        </a>
-      </li>
-    <% end %>
-  </ul>
 
-<a href="../">Back</a>
-
+  <%end%><!-- end categories loop-->
 </div>
+
+
 
 
