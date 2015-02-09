@@ -26,5 +26,8 @@ post '/login' do
     @invalid_login = true
     erb :'auth/login'
   end
+end
 
+get '/signup_partial' do
+  erb :'/auth/signup', :layout => false
 end
