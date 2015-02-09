@@ -6,7 +6,7 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
   $("#show_signup").click(function(){
     $.get("/signup_partial", function(data){
-      $("#loginForm").html(data);
+      $("#loginForm").replaceWith(data);
     });
   });
 

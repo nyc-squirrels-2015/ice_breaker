@@ -5,7 +5,7 @@ end
 post '/signup' do
   a_user = User.create(params[:user])
   session[:user] = a_user.id
-  redirect '/'
+  redirect '/categories'
 end
 
 get '/logout' do
