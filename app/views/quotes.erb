@@ -8,6 +8,10 @@
 </form>
 
 <div class="list-group">
+
+<!-- ZM: For a loop this big, look into rendering a partial, and sending it in locals -->
+<!-- THERE IS Wayyyyyyyyyy to much pgoing on here to not be broken out  -->
+
   <% @quotes.each do |quote| %>
   <div class="list-group-item active">
     <h4 class="list-group-item-heading"><%=quote.user.name%></h4>

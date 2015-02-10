@@ -2,6 +2,9 @@ require_relative '../spec_helper'
 
 class QuoteSpec
   describe 'quotes' do
+
+    #ZM: All of these can be turned into Let statements and they should be too. 
+
     category = Category.create(name:"Funny")
     subcategory = Subcategory.create(name:"Punny", category: category)
     user = User.create(name: "Gary", email: "gary@gary.com", password: "gary")
