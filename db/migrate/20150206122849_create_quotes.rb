@@ -1,3 +1,5 @@
+#ZM: Where are you database constraints?
+
 class CreateQuotes < ActiveRecord::Migration
   def change
     create_table  :quotes do |t|

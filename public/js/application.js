@@ -3,7 +3,7 @@ $(document).ready(function() {
   // This guarantees that any elements we bind to will exist on the page
   // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  //ZM: how would you re write this knowing what we know now. 
   $("#show_signup").click(function(){
     $.get("/signup_partial", function(data){
       $("#loginForm").replaceWith(data);

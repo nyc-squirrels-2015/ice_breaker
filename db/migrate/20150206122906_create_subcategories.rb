@@ -1,3 +1,4 @@
+#ZM: Where are you database constraints?
 class CreateSubcategories < ActiveRecord::Migration
   def change
     create_table :subcategories do |t|

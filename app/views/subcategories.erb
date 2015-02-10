@@ -2,6 +2,9 @@
 <div class="list-group categories_subcategories">
 
   <h1><%=@category_name%></h1>
+
+  <!-- ZM: For a loop this big, look into rendering a partial, and sending it in locals -->
+  
   <%@subcategories.each do |subcategory|%>
 
         <div class="list-group-item active">
